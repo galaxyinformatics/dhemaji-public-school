@@ -1,91 +1,231 @@
+
+
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0px auto;
+  gap: 20px;
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.mainSection {
+  width: 100%;
+  float: left;
+  padding: 70px 0px 70px 0px;
 }
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.heading {
+  font-size: 28px;
+  font-weight: 500;
+  border-bottom: 1px solid #46b7c1;
+  margin-bottom: 20px;
+  color: #46b7c1;
 }
-
-.title {
-  margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
+.header {
+	background: #46b7c1;
+	padding: 12px;
 }
-
-.title {
-  text-align: center;
+.header b {
+	background: #46b7c1;
+	color: red;
+	padding:10px;
+	font-size: 20px;
 }
-
-.title,
-.description {
-  text-align: center;
-}
-
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.header marquee {
+	font-size:20px;
+	color: #ffffff;
+	width: 80%;
+  
 }
 
 .logo {
-  height: 1em;
+	height:100px;
+  width:100px;
+}
+/*Menu Section Menu Section*/
+
+.slider {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: space-between;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
-@media (max-width: 600px) {
+.carouselContainer {
+  flex: 2; /* Take 2/3 of the available space */
+  margin-right: 20px; /* Add some space between carousel and notice board */
+}
+
+.marqueeSize{
+  height:340px;
+  border: 1px;
+
+}
+.event {
+  width: 40%;
+  margin-right: 1%;
+  background-color: #fff;
+  padding: 0px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.event .heading {
+  border-bottom: 1px solid #46b7c1;
+  padding: 5px;
+  color: #fff;
+  background: #46b7c1;
+  text-align: center;
+}
+
+.frontContainer {
+  width: 40%;
+  background-color: #fff;
+  padding: 0px;
+  border: 1px solid grey;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.frontContainer .heading {
+  padding: 5px;
+  background: linear-gradient(180deg, rgb(2, 135, 192), rgb(1, 209, 136));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+.frontContainerContent {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.frontContainerContent button {
+  background-color: #007bff; /* Primary blue color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  margin-bottom: 10px;
+}
+
+.frontContainerContent button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.frontContainerContent button:focus {
+  outline: none; /* Remove outline when button is focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+}
+.event ul li {
+  margin-bottom: 20px;
+  width: 100%;
+  float: left;
+  list-style: none;
+}
+.eventDate {
+  background: #46b7c1;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 12px;
+  margin-right: 10px;
+}
+
+
+.mlAuto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.siteContainer {
+  flex-direction: row;
+   justify-content: center;
+    align-items: center ;
+    display:flex;
+ }
+
+ .carouselImage {
+  width: 600px;
+  height: 400px;
+  object-fit: cover; /* ensures the image covers the area without distortion */
+  aspect-ratio: 3 / 2; /* maintains the 600px by 400px ratio */
+}
+
+
+
+ @media (max-width: 768px) {
+  .siteContainer {
+    flex-direction: column;
+    gap: 10px
+  }
+
+  .event {
+    width: 75%;
+
+  }
+
+  .carouselContainer {
+    flex: 2; /* Take 2/3 of the available space */
+    margin-right: 0px; /* Add some space between carousel and notice board */
+  }
+
+  .carouselImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .frontContainer{
+    width: 85%;
+  }
+ }
+
+@media (max-width: 425px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+
+  .dropdown1 {
+    position: relative;
+    
+  }
+  .dropdown1content {
+    display: none;
+  
+  }
+  .dropdown1:hover .dropdown1content {
+    
+    position: relative;
+    
+    z-index: 100;
+    border-radius: 5px;
+  border-width: 10px;
+  }
+
+  .event {
+    width: 95%;
+
+  }
+
+
+  .marqueeSize{
+    height:340px;
+    border: 1px;
+  }
+
+  .heading {
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 1px solid #46b7c1;
+    margin-bottom: 20px;
+    color: #46b7c1;
+  }
+
 }

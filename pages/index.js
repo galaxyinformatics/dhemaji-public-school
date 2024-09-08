@@ -1,115 +1,91 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Image from 'next/image'
+import Carousel from '../components/carousel';
+import Navbar from '../components/navbar2.js';
+import MySVGImage from '../components/images/logoFinal.svg';
+import Link from 'next/link';
+
+
+
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+      <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Welcome to Dhemaji Public School, a nurturing environment for young minds. Explore our programs and facilities."/>
+    <title>Dhemaji Public School - Nurturing Young Minds</title>
       </Head>
+     
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+<div className={`${styles.slider} ${styles.siteContainer}`}>
+<div className={styles.carouselContainer}>
+    <Carousel />
+  </div>
+  <div className={styles.event}>
+      <h2 className={styles.heading}>Notice Boards</h2>
+      <div className={styles.marqueeSize}>
+        <marquee direction="up" scrollamount="5" style={{height:'340px'}} >
+          <ul>
+            <li>
+              <i>01-April-2023 :</i> Admissions Open <p style={{color: 'red'}}>New</p>
+            </li>
+            <li>
+              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
+            </li>
+            <li>
+              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
+            </li>
+            <li>
+              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
+            </li>
+            <li>
+              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
+            </li>
+            <li>
+              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
+            </li>
+            <li>
+              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
+            </li>
+          </ul>
+        </marquee>
+      </div>
     </div>
+</div>
+
+<div className={styles.mainSection} style={{background:'#f0f3fa'}}>
+  <div className={`${styles.container} ${styles.siteContainer}`}>
+
+  <div className={styles.frontContainer}>
+      <h2 className={styles.heading}>About Us</h2>
+      <div className={styles.frontContainerContent}>
+      <Image 
+              src={MySVGImage} 
+              alt="School Logo" 
+              height={400} 
+              width={400} 
+            />
+        <p> Kids Care Edutech & Research Trust one of the top foundation school from New Delhi is an organization in education with its significant contribution in spreading value-based learning to all the sections of the society. By way of inculcating the right balance of Vedic wisdom and modern technology in young minds, the society is unique in its educative endeavors </p>
+        <Link href="/about"><button>Read More</button></Link>
+        
+      </div>
+    </div>
+
+    <div className={styles.frontContainer}>
+      <h2 className={styles.heading}>Chairman's Message</h2>
+      <div className={styles.frontContainerContent}>
+        <p> I believe that holistic education is the sole crucial factor which leads to enriching progress in the true sense of the word. </p>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    </>
   )
 }
