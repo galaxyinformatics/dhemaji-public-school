@@ -48,7 +48,8 @@ function TwoLayerNavbar() {
           </div>
           <div className={styles.navItemsRight}>
           <button className={styles.loginButton} class="log">Student Login</button>
-          <button className={styles.loginButton} class="log">Admin Login</button>
+          <Link href="/adminLogin" ><button className={styles.loginButton} class="log">Admin Login</button></Link>
+          
         
           </div>
         </div>

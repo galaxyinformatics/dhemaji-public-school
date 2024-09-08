@@ -4,7 +4,7 @@ import ContactPhoneIcon from '@mui/icons-material/Call';
 export const Footer=()=>{
     return (
         <>
-        <div style={{marginTop:'10px'}}>
+        <div style={{marginTop:'10px', bottom: '0', width: '100%'}}>
         <div style={{justifyContent:'center',textAlign:'center',padding:'20px', alignItems:'center',background: 'linear-gradient(90deg, rgb(0, 179, 255), rgb(146, 219, 67))',margin:'auto'}} className={styles.siteContainer}>
             <div style={{paddingLeft:'20px',paddingRight:'20px',textAlign:'center'}}><p style={{color:'black'}}>Address : Railway Station Road, Opposite Public Health Engineering, Dhemaji</p><a href="tel:9864463773" style={{textDecoration:'none'}}>
 <div className={styles.navbarBrand3} >

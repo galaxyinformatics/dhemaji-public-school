@@ -5,6 +5,8 @@ import Carousel from '../components/carousel';
 import Navbar from '../components/navbar2.js';
 import MySVGImage from '../components/images/logoFinal.svg';
 import Link from 'next/link';
+import NoticeBoard from '../components/NoticeBoard';
+
 
 
 
@@ -30,31 +32,7 @@ export default function Home() {
   <div className={styles.event}>
       <h2 className={styles.heading}>Notice Boards</h2>
       <div className={styles.marqueeSize}>
-        <marquee direction="up" scrollamount="5" style={{height:'340px'}} >
-          <ul>
-            <li>
-              <i>01-April-2023 :</i> Admissions Open <p style={{color: 'red'}}>New</p>
-            </li>
-            <li>
-              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
-            </li>
-            <li>
-              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
-            </li>
-            <li>
-              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
-            </li>
-            <li>
-              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
-            </li>
-            <li>
-              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
-            </li>
-            <li>
-              <i>01-April-2023 :</i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <p>New</p>
-            </li>
-          </ul>
-        </marquee>
+      <NoticeBoard/>
       </div>
     </div>
 </div>
