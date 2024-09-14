@@ -21,20 +21,21 @@ function TwoLayerNavbar() {
           <div className={styles.navSocials}>
           <a className={styles.navbarBrand3} style={{textDecoration:'none'}} onClick={() => window.location = 'mailto:kidscaredhemaji@gmail.com'}>
 
-            <div style={{paddingLeft:'5px', paddingRight: '5px'}}><EmailIcon /></div>
+            <div className={styles.navLink2} style={{paddingLeft:'5px', paddingRight: '5px'}}><EmailIcon /></div>
             </a>
-            <div style={{paddingLeft:'5px', paddingRight: '5px'}}><CallIcon /></div>
+            <div className={styles.navLink2} style={{paddingLeft:'5px', paddingRight: '5px'}}><CallIcon /></div>
           </div>
         </div>
       </div>
       <div className={styles.navbarCenter}>
         <div className="container d-flex justify-content-between align-items-center">
           <div className={styles.navItemsLeft}>
-          <div className={styles.two}>
+          <Link href="/" style={{textDecoration: 'none'}}><div className={styles.two}>
             <h1>DHEMAJI PUBLIC SCHOOL
                 <span>Dhemaji, Assam</span>
             </h1>
           </div>
+          </Link>
         
         
           </div>
@@ -47,8 +48,7 @@ function TwoLayerNavbar() {
             />
           </div>
           <div className={styles.navItemsRight}>
-          <button className={styles.loginButton} class="log">Student Login</button>
-          <Link href="/adminLogin" ><button className={styles.loginButton} class="log">Admin Login</button></Link>
+          <Link href="/login" ><button className={styles.loginButton} class="log">Login</button></Link>
           
         
           </div>

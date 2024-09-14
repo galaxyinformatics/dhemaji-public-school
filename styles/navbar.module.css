@@ -131,6 +131,10 @@
   text-decoration: none;
 }
 
+.navLink2:hover {
+  font-weight: bolder;
+}
+
 .navSocials{
   display: flex;
   align-items: right;
