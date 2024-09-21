@@ -48,7 +48,7 @@ function TwoLayerNavbar() {
             />
           </div>
           <div className={styles.navItemsRight}>
-          <Link href="/login" ><button className={styles.loginButton} class="log">Login</button></Link>
+          <Link href="https://school-management-app-rho.vercel.app" ><button className={styles.loginButton} class="log">Login</button></Link>
           
         
           </div>
