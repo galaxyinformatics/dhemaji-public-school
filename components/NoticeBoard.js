@@ -3,6 +3,13 @@ import { useEffect, useState } from 'react';
 export default function NoticeBoard() {
   const [notices, setNotices] = useState([]);
 
+  const hNotices = [
+    {
+      id: 1,
+      created_at: '2024-11-01T10:30:00Z',
+      title: 'Admissions Open',
+    }
+  ];
   useEffect(() => {
     // Fetch notices from your API
     async function fetchNotices() {
@@ -21,7 +28,7 @@ export default function NoticeBoard() {
   return (
     <marquee direction="up" scrollamount="5" style={{ height: '340px' }}>
       <ul>
-        {notices.map((notice) => (
+        {hNotices.map((notice) => (
           <li key={notice.id}>
             <i>{new Date(notice.created_at).toLocaleDateString()} :</i> {notice.title}
             <p style={{ color: 'red' }}>New</p>
